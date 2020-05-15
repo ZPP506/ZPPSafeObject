@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ZPPSafeObject'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'ZPPSafeObject for Kill APP of iOS'
 
 # This description is used to generate tags and improve search results.

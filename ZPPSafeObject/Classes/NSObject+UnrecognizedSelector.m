@@ -9,11 +9,13 @@
 @implementation NSObject (UnrecognizedSelector)
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wobjc-protocol-method-implementation"
+ #ifdef  DEBUG
+ #else
 + (void)initialize{
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        #ifdef  DEBUG
-        #else
+       
+       
           /**实例方法转发*/
           Method oldmeThodmethodSignatureForSelector = class_getInstanceMethod(self, @selector(methodSignatureForSelector:));
           Method newmeThodmethodSignatureForSelector = class_getInstanceMethod(self, @selector(new_methodSignatureForSelector:));
@@ -30,9 +32,10 @@
           Method class_oldmeThodforwardInvocation = class_getClassMethod(self, @selector(forwardInvocation:));
           Method class_newmeThodforwardInvocation = class_getClassMethod(self, @selector(new_forwardInvocation:));
           method_exchangeImplementations(class_oldmeThodforwardInvocation, class_newmeThodforwardInvocation);
-        #endif
+       
     });
 }
+#endif
 #pragma clang diagnostic pop
 #pragma mark - 实例方法转发
 - (void)new_forwardInvocation:(NSInvocation *)anInvocation{

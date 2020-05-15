@@ -1,8 +1,8 @@
 {
   "name": "ZPPSafeObject",
   "version": "0.1.0",
-  "summary": "A short description of ZPPSafeObject.",
-  "description": "TODO: Add long description of the pod here.",
+  "summary": "ZPPSafeObject for Kill APP of iOS",
+  "description": "TODO: ZPPSafeObject for Kill APP of iOS",
   "homepage": "https://github.com/ZPP506/ZPPSafeObject",
   "license": {
     "type": "MIT",

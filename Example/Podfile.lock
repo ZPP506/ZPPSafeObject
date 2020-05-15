@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  ZPPSafeObject: fddb62166a3bc59042c6c18b7a224c76a0ae869f
+  ZPPSafeObject: 8c564f1b10c4e9c1daa295506be646feaa7f7976
 
 PODFILE CHECKSUM: 4b41bf8476a370fde12be9afc5ee4a4c3ada2898
 
