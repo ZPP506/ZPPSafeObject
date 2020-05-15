@@ -22,7 +22,10 @@ pod 'ZPPSafeObject'
 ## App常见崩溃，方法找不到,容器越界，字典空值
 
 * NSObject+UnrecognizedSelector
-
+ 
+ > dubug: 方法找不到 崩溃提示
+ > release: 进行容错处理
+ 
 * 数组下标越界
 
 示例代码：
