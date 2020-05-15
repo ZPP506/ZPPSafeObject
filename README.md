@@ -23,8 +23,8 @@ pod 'ZPPSafeObject'
 
 * NSObject+UnrecognizedSelector
  
- > dubug: 方法找不到 崩溃提示
- > release: 进行容错处理
+ 1. dubug: 方法找不到 崩溃提示
+ 2. release: 进行容错处理
  
 * 数组下标越界
 
