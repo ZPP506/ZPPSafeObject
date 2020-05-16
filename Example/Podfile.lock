@@ -1,5 +1,5 @@
 PODS:
-  - ZPPSafeObject (0.1.0)
+  - ZPPSafeObject (0.1.1)
 
 DEPENDENCIES:
   - ZPPSafeObject (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  ZPPSafeObject: 8c564f1b10c4e9c1daa295506be646feaa7f7976
+  ZPPSafeObject: 3bbf4267da82a496f5d6e72ee716197cc9371621
 
 PODFILE CHECKSUM: 4b41bf8476a370fde12be9afc5ee4a4c3ada2898
 

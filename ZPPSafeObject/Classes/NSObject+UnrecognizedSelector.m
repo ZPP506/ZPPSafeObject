@@ -11,7 +11,7 @@
 #pragma clang diagnostic ignored "-Wobjc-protocol-method-implementation"
  #ifdef  DEBUG
  #else
-+ (void)initialize{
++ (void)load{
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
        
@@ -47,7 +47,8 @@
 - (NSMethodSignature *)new_methodSignatureForSelector:(SEL)aSelector{
     NSMethodSignature * signature = [self new_methodSignatureForSelector:aSelector];
     if (signature == nil) {
-        return [NSMethodSignature signatureWithObjCTypes: "v@:"];
+        Class superClass =  class_getSuperclass(object_getClass(self));
+        return [[superClass new] new_methodSignatureForSelector:aSelector];
     }
     return signature;
 }
@@ -56,7 +57,8 @@
 + (NSMethodSignature *)new_methodSignatureForSelector:(SEL)aSelector{
     NSMethodSignature * signature = [self new_methodSignatureForSelector:aSelector];
     if (signature == nil) {
-        return [NSMethodSignature signatureWithObjCTypes: "v@:"];
+         Class superClass =  class_getSuperclass(self);
+        return [superClass new_methodSignatureForSelector:aSelector];
     }
     return signature;
 }

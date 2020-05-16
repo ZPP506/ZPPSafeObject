@@ -16,6 +16,13 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    id zhang = @"123";
+   NSString * S123 = zhang[@"123"];
+    [zhang setURL:nil];
+   NSLog(@"--%@",S123);
+
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
