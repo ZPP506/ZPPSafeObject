@@ -6,6 +6,7 @@
 #import <Foundation/Foundation.h>
 
 @interface NSObject (UnrecognizedSelector)
-
+/* 不能为 NSObject 添加方法 unrecognized selector sent to instance 请使用子类 */
++ (void)avoidCrashExchangeMethodIfDeal;
 @end
 
